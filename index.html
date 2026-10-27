@@ -3,40 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GraphAdda Studio | Coming Soon</title>
+    <title>GraphAdda Studio | Premium Design & Brand Identity</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131a26;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent-purple), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
             text-align: center;
         }
-        .container {
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(to right, var(--accent-purple), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1rem));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border: 1px solid #1f2937;
+            padding: 2.5rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-purple);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .contact-section {
             max-width: 600px;
-            padding: 20px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+            text-align: center;
         }
-        h1 {
-            font-size: 2.5rem;
-            color: #111;
-            margin-bottom: 10px;
+
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
-        p {
-            font-size: 1.2rem;
-            color: #666;
-            line-height: 1.6;
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--accent-purple), #7c3aed);
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s ease;
+            margin-top: 1.5rem;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #1f2937;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .services-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>GraphAdda Studio</h1>
-        <p>Our official website is coming soon.</p>
-        <p>A reliable partner for premium packaging, brand visual identity, and logo design for your projects.</p>
-    </div>
+
+    <header>
+        <div class="logo">GraphAdda Studio</div>
+    </header>
+
+    <section class="hero">
+        <h1>Your Reliable Partner for <span>Premium Design</span></h1>
+        <p>We craft high-end visual solutions that scale brands. From concept sketch to finished production, we bring your vision to life with precision.</p>
+    </section>
+
+    <section class="services-grid">
+        <div class="service-card">
+            <h3>Premium Packaging</h3>
+            <p>Custom structural design, luxury unboxing experiences, and shelf-ready material strategies that command attention.</p>
+        </div>
+        <div class="service-card">
+            <h3>Brand Visual Identity</h3>
+            <p>Comprehensive design systems, typography guidelines, and color palettes that represent your business values across all platforms.</p>
+        </div>
+        <div class="service-card">
+            <h3>Logo Design</h3>
+            <p>Timeless, iconic vector marks built meticulously to anchor your company’s market presence and remain memorable.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <h2>Let's build something exceptional</h2>
+        <p>Ready to level up your project's visual presentation? Get in touch with us today.</p>
+        <a href="mailto:contact@graphadda.studio" class="btn">Start Your Project</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 GraphAdda Studio. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
