@@ -4,606 +4,435 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101715">
-<meta name="description" content="GraphAdda Studio creates distinctive brand identities, premium packaging, and memorable logo designs for ambitious businesses.">
-<title>GraphAdda Studio | Branding & Packaging Design</title>
+<meta name="theme-color" content="#101b1b">
+<meta name="description" content="GraphAdda Studio creates distinctive brand identities, premium packaging, logo design and visual experiences.">
+<title>GraphAdda Studio | Creative Design & Branding</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg: #101715;
-  --panel: #17211e;
-  --panel-light: #202b27;
-  --mint: #b8f28b;
-  --text: #f4f5ef;
-  --muted: #a4b0a9;
-  --line: rgba(255,255,255,.12);
-  --serif: "Playfair Display", Georgia, serif;
-  --sans: "DM Sans", Arial, sans-serif;
+  --bg: #101b1b;
+  --surface: #172525;
+  --surface-light: #1c3030;
+  --accent: #a9e5c5;
+  --text: #f5f5ef;
+  --muted: #b1bfba;
+  --border: rgba(245,245,239,.13);
 }
-* { box-sizing: border-box; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
 body {
-  margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--sans);
-  line-height: 1.65;
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
 }
+
 a { color: inherit; text-decoration: none; }
-button, a { -webkit-tap-highlight-color: transparent; }
-.wrap { width: min(1160px, 90%); margin: auto; }
+
+.container { width: min(1120px, 90%); margin: auto; }
+
 header {
   position: sticky;
   top: 0;
-  z-index: 20;
-  background: rgba(16,23,21,.94);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(16px);
+  z-index: 10;
+  background: rgba(16,27,27,.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
 }
+
 .nav {
-  min-height: 82px;
+  min-height: 78px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 24px;
 }
-.brand {
-  display: inline-flex;
-  flex-direction: column;
-  line-height: 1;
-  flex-shrink: 0;
-}
-.brand-name {
-  font-size: 27px;
-  font-weight: 800;
-  letter-spacing: -1.5px;
-}
-.brand-name .adda { color: var(--mint); }
-.brand-tag {
-  color: var(--muted);
-  font-size: 9px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-top: 8px;
-}
-nav { display: flex; align-items: center; gap: 28px; }
-nav a { color: var(--muted); font-size: 13px; transition: .2s; }
-nav a:hover { color: var(--mint); }
-.nav-cta, .button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 9px;
-  background: var(--mint);
-  color: #101715;
-  padding: 13px 19px;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 800;
-  transition: transform .2s, background .2s;
-}
-.nav-cta:hover, .button:hover {
-  transform: translateY(-2px);
-  background: #d0ffae;
-}
-.menu-toggle {
-  display: none;
-  color: var(--text);
-  background: transparent;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 8px 12px;
-  font: inherit;
-}
-.hero {
-  position: relative;
-  overflow: hidden;
-  padding: 105px 0 92px;
-  border-bottom: 1px solid var(--line);
-}
-.hero:before {
-  content: "";
-  position: absolute;
-  width: 560px;
-  height: 560px;
-  right: -190px;
-  top: -170px;
-  background: radial-gradient(circle, rgba(184,242,139,.13), transparent 68%);
-  pointer-events: none;
-}
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 64px;
-  align-items: center;
-}
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--mint);
-  font-size: 11px;
-  letter-spacing: 2.4px;
+
+.logo {
+  font-size: 1.2rem;
   font-weight: 700;
+  letter-spacing: -.7px;
+}
+
+.logo span { color: var(--accent); }
+
+nav { display: flex; gap: 25px; align-items: center; }
+
+nav a { font-size: .9rem; color: var(--muted); }
+nav a:hover, footer a:hover { color: var(--accent); }
+
+.hero { padding: 110px 0 100px; }
+
+.eyebrow {
+  color: var(--accent);
   text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
-.eyebrow:before {
-  content: "";
-  width: 27px;
-  height: 1px;
-  background: var(--mint);
-}
-h1 {
-  margin: 25px 0 24px;
-  max-width: 720px;
-  font-family: var(--serif);
-  font-size: clamp(46px, 6.2vw, 79px);
+
+h1, h2, h3 { line-height: 1.2; }
+
+h1, h2 {
+  font-family: "Playfair Display", Georgia, serif;
   font-weight: 500;
-  line-height: 1.09;
-  letter-spacing: -2px;
 }
-h1 em { color: var(--mint); font-weight: 500; }
-.hero-copy {
-  max-width: 510px;
+
+h1 {
+  max-width: 800px;
+  font-size: clamp(3.2rem, 8vw, 6.4rem);
+  letter-spacing: -3px;
+}
+
+h1 span { color: var(--accent); }
+
+.hero p {
+  max-width: 620px;
+  margin: 25px 0 30px;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 1.08rem;
 }
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  align-items: center;
-  margin-top: 32px;
-}
-.button-outline {
+
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 18px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 600;
+  gap: 8px;
+  padding: 13px 20px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font: inherit;
+  font-size: .9rem;
+  font-weight: 700;
+  transition: .2s ease;
+  cursor: pointer;
 }
-.button-outline:hover { border-color: var(--mint); color: var(--mint); }
-.hero-note {
-  margin-top: 27px;
-  color: var(--muted);
-  font-size: 12px;
-}
-.hero-note span { color: var(--mint); }
-.hero-art {
-  min-height: 395px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.art-frame {
-  width: 100%;
-  max-width: 430px;
-  aspect-ratio: 4 / 4.4;
-  position: relative;
-  border: 1px solid rgba(184,242,139,.25);
-  background:
-    radial-gradient(ellipse at 50% 43%, rgba(184,242,139,.12), transparent 48%),
-    linear-gradient(145deg, #202d28, #111815 65%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.art-frame:before, .art-frame:after {
-  content: "";
-  position: absolute;
-  width: 70%;
-  height: 70%;
-  border: 1px solid rgba(184,242,139,.12);
-  transform: rotate(45deg);
-}
-.art-frame:after { width: 48%; height: 48%; }
-.art-wordmark {
-  position: relative;
-  z-index: 1;
-  font-size: clamp(35px, 5.1vw, 58px);
-  letter-spacing: -3px;
-  font-weight: 800;
-}
-.art-wordmark .adda { color: var(--mint); }
-.art-sub {
-  position: absolute;
-  z-index: 2;
-  bottom: 28px;
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-.art-index {
-  position: absolute;
-  top: 17px;
-  left: 18px;
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: 2px;
-}
-.art-badge {
-  position: absolute;
-  right: -5px;
-  bottom: 55px;
-  z-index: 3;
-  padding: 15px 19px;
-  background: var(--mint);
-  color: var(--bg);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: .5px;
-}
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  border-bottom: 1px solid var(--line);
-}
-.stat { padding: 26px 15px; text-align: center; }
-.stat strong { display: block; font-family: var(--serif); font-size: 25px; font-weight: 500; }
-.stat span { font-size: 11px; color: var(--muted); }
-section { padding: 94px 0; }
-.section-head {
+
+.btn-primary { background: var(--accent); color: #10201a; border-color: var(--accent); }
+.btn-primary:hover { background: #c4f0d6; transform: translateY(-2px); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+section { padding: 80px 0; border-top: 1px solid var(--border); }
+
+.section-heading {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  gap: 30px;
-  margin-bottom: 38px;
+  gap: 25px;
+  margin-bottom: 28px;
 }
-.section-head h2, .about h2, .contact h2 {
-  font-family: var(--serif);
-  font-size: clamp(34px,4.2vw,52px);
-  line-height: 1.15;
-  font-weight: 500;
-  letter-spacing: -1px;
-  margin: 13px 0 0;
+
+h2 { font-size: clamp(2.1rem, 5vw, 3.5rem); letter-spacing: -1px; }
+
+.section-intro { color: var(--muted); max-width: 620px; margin-top: 15px; }
+
+.portfolio-panel {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--surface), #152020);
 }
-.section-head p { max-width: 360px; color: var(--muted); font-size: 13px; margin: 0; }
+
+.portfolio-panel h3 { font-size: 1.35rem; margin-bottom: 10px; }
+
+.portfolio-panel p { color: var(--muted); margin-bottom: 22px; }
+
+.portfolio-links { display: flex; flex-wrap: wrap; gap: 12px; }
+
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 27px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
 }
+
 .project {
-  min-width: 0;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  transition: transform .25s, border-color .25s;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 25px;
+  transition: .2s ease;
 }
-.project:hover { transform: translateY(-5px); border-color: rgba(184,242,139,.5); }
-.project-image {
-  aspect-ratio: 4 / 3;
-  background: #202925;
-  overflow: hidden;
-}
-.project-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .5s;
-}
-.project:hover img { transform: scale(1.035); }
-.project-info { padding: 22px 23px 24px; }
-.project-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  font-size: 10px;
-  color: var(--mint);
-  letter-spacing: 1.5px;
+
+.project:hover { transform: translateY(-3px); border-color: var(--accent); }
+
+.project small {
+  color: var(--accent);
   text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: .7rem;
 }
-.project-info h3 { margin: 12px 0 7px; font-family: var(--serif); font-size: 25px; font-weight: 500; }
-.project-info p { color: var(--muted); font-size: 13px; margin: 0; }
-.project-link { display: inline-block; margin-top: 18px; font-size: 12px; font-weight: 700; }
-.project-link:hover { color: var(--mint); }
-.all-work { text-align: center; margin-top: 34px; }
-.services { background: #151e1a; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.service-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
-.service {
-  border: 1px solid var(--line);
-  padding: 27px 24px;
-  background: rgba(255,255,255,.015);
+
+.project h3 { font-size: 1.3rem; margin: 10px 0; }
+.project p { color: var(--muted); font-size: .9rem; }
+.project .project-link { display: inline-block; margin-top: 15px; font-size: .88rem; font-weight: 700; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
 }
-.service-num { color: var(--mint); font-size: 11px; letter-spacing: 2px; }
-.service h3 { font-family: var(--serif); font-size: 23px; font-weight: 500; margin: 24px 0 10px; }
-.service p { color: var(--muted); font-size: 13px; margin: 0; }
-.about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: start; }
-.about-mark {
-  min-height: 270px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  font-size: clamp(45px,7vw,75px);
-  font-weight: 800;
-  letter-spacing: -4px;
+
+.service-card {
+  padding: 25px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
 }
-.about-mark span { color: var(--mint); }
-.about-copy p { color: var(--muted); font-size: 14px; }
-.pills { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 23px; }
-.pills span {
-  border: 1px solid var(--line);
-  padding: 7px 12px;
+
+.service-number { color: var(--accent); font-size: .8rem; letter-spacing: 2px; }
+.service-card h3 { margin: 13px 0 10px; font-size: 1.2rem; }
+.service-card p { color: var(--muted); font-size: .92rem; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.about-copy { color: var(--muted); }
+.values { display: grid; gap: 12px; }
+.value { padding: 15px 18px; border-left: 2px solid var(--accent); background: var(--surface); }
+
+.contact-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: clamp(25px, 5vw, 55px);
+}
+
+.contact-box p { color: var(--muted); margin: 16px 0 25px; max-width: 600px; }
+
+footer {
+  padding: 30px 0;
+  border-top: 1px solid var(--border);
   color: var(--muted);
-  font-size: 11px;
+  font-size: .85rem;
 }
-.contact {
-  padding: 78px 0;
-  background: var(--panel);
-  border-top: 1px solid var(--line);
-}
-.contact-grid { display: flex; align-items: center; justify-content: space-between; gap: 35px; }
-.contact h2 { max-width: 600px; }
-.contact p { color: var(--muted); font-size: 14px; }
-.contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
-footer { padding: 26px 0; }
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
+
+.footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+footer a { margin-left: 14px; }
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  padding: 20px;
+  background: rgba(0,0,0,.75);
   align-items: center;
-  gap: 20px;
+  justify-content: center;
 }
-.footer-copy { color: var(--muted); font-size: 11px; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 19px; font-size: 12px; color: var(--muted); }
-.footer-links a:hover { color: var(--mint); }
-.sword-note { color: var(--muted); font-size: 10px; letter-spacing: 2px; margin-top: 10px; }
-@media (max-width: 800px) {
-  .nav { min-height: 72px; }
-  .menu-toggle { display: block; }
-  nav {
-    display: none;
-    position: absolute;
-    top: 72px;
-    left: 0;
-    right: 0;
-    padding: 22px 5%;
-    background: var(--bg);
-    border-bottom: 1px solid var(--line);
-    flex-direction: column;
-    align-items: stretch;
-    gap: 19px;
-  }
-  nav.open { display: flex; }
-  nav a { padding: 4px 0; }
-  .nav-cta { text-align: center; }
-  .hero { padding: 70px 0; }
-  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-  .hero-art { min-height: auto; padding: 10px 8px 22px 0; }
-  .art-frame { max-width: 430px; }
-  .section-head { align-items: start; flex-direction: column; }
-  .about-grid { grid-template-columns: 1fr; gap: 30px; }
-  .about-mark { min-height: 210px; }
-  .contact-grid { align-items: start; flex-direction: column; }
+
+.popup-overlay.open { display: flex; }
+
+.popup-card {
+  position: relative;
+  width: min(440px, 100%);
+  padding: 32px;
+  border-radius: 12px;
+  background: #172525;
+  border: 1px solid rgba(169,229,197,.4);
+  box-shadow: 0 25px 80px rgba(0,0,0,.4);
 }
-@media (max-width: 560px) {
-  .wrap { width: 90%; }
-  h1 { letter-spacing: -1.4px; }
-  section { padding: 68px 0; }
-  .project-grid, .service-grid { grid-template-columns: 1fr; }
-  .stats { grid-template-columns: repeat(3,1fr); }
-  .stat { padding: 20px 5px; }
-  .stat strong { font-size: 21px; }
-  .stat span { font-size: 9px; }
-  .project-info { padding: 19px; }
-  .footer-inner { align-items: flex-start; flex-direction: column; }
+
+.popup-card h2 { font-size: 2rem; margin-bottom: 10px; }
+.popup-card p { color: var(--muted); margin: 12px 0 20px; }
+
+.close-popup {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.8rem;
+  cursor: pointer;
 }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *:before, *:after { transition: none !important; }
+
+.email-address {
+  display: block;
+  padding: 13px;
+  margin-bottom: 14px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+
+.popup-actions { display: grid; gap: 10px; }
+.popup-actions .btn { width: 100%; }
+
+@media (max-width: 760px) {
+  .nav { padding: 14px 0; align-items: flex-start; flex-direction: column; gap: 10px; }
+  nav { gap: 16px; flex-wrap: wrap; }
+  nav a { font-size: .82rem; }
+  .hero { padding: 75px 0; }
+  h1 { letter-spacing: -1.5px; }
+  section { padding: 60px 0; }
+  .section-heading { align-items: flex-start; flex-direction: column; }
+  .project-grid, .services-grid, .about-grid { grid-template-columns: 1fr; }
+  .portfolio-panel { padding: 22px; }
+  .footer-inner { flex-direction: column; }
+  footer a { margin-left: 0; margin-right: 14px; }
 }
 </style>
 </head>
 
 <body>
+
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#home" aria-label="GraphAdda Studio home">
-      <span class="brand-name">Graph<span class="adda">Adda</span></span>
-      <span class="brand-tag">Studio · Design · Identity</span>
-    </a>
-
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-
-    <nav id="mainNav">
-      <a href="#work">Selected Work</a>
+  <div class="container nav">
+    <a class="logo" href="#home">GraphAdda <span>Studio.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#portfolio">Portfolio</a>
       <a href="#services">Services</a>
       <a href="#about">About</a>
-      <a href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener">Contra Portfolio ↗</a>
-      <a class="nav-cta" href="#contact">Let's Talk ↗</a>
+      <a href="#contact" data-contact>Let's Talk ↗</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">Independent Design Studio</div>
-        <h1>Make your brand <em>impossible</em> to ignore.</h1>
-        <p class="hero-copy">
-          Distinctive brand identities, memorable logos, and premium packaging
-          designed to help ambitious businesses stand out and connect with people.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#work">Explore Our Work <span>↗</span></a>
-          <a class="button-outline" href="#contact">Start a Project</a>
-        </div>
-        <div class="hero-note"><span>✳</span> Thoughtful design. Clear strategy. Lasting impressions.</div>
-      </div>
-
-      <div class="hero-art" aria-label="GraphAdda Studio wordmark artwork">
-        <div class="art-frame">
-          <div class="art-index">G / A — 001</div>
-          <div class="art-wordmark">Graph<span class="adda">Adda</span></div>
-          <div class="art-sub">Ideas into identity</div>
-        </div>
-        <div class="art-badge">BUILT TO STAND OUT ↗</div>
-      </div>
+  <div class="container hero" id="home">
+    <div class="eyebrow">Independent Creative Studio</div>
+    <h1>Make your brand <span>impossible to ignore.</span></h1>
+    <p>Distinctive brand identities, memorable logos and premium packaging for businesses ready to look as good as their ideas.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#portfolio">Explore My Work ↓</a>
+      <a class="btn btn-outline" href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">View Canva Portfolio ↗</a>
+      <a class="btn btn-outline" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">View Contra ↗</a>
     </div>
-  </section>
-
-  <div class="wrap stats">
-    <div class="stat"><strong>01</strong><span>Strategy-led thinking</span></div>
-    <div class="stat"><strong>02</strong><span>Distinctive visual identity</span></div>
-    <div class="stat"><strong>03</strong><span>Detail-driven execution</span></div>
   </div>
 
-  <section id="work">
-    <div class="wrap">
-      <div class="section-head">
+  <section id="portfolio">
+    <div class="container">
+      <div class="eyebrow">Selected Projects</div>
+      <div class="section-heading">
         <div>
-          <div class="eyebrow">Selected Projects</div>
-          <h2>Design with a point of view.</h2>
+          <h2>Design that leaves<br>a lasting impression.</h2>
+          <p class="section-intro">Explore branding, packaging, logo and visual design work created with care and attention to detail.</p>
         </div>
-        <p>A selection of identity, packaging, and visual design explorations from the GraphAdda portfolio.</p>
+      </div>
+
+      <div class="portfolio-panel">
+        <h3>Explore the complete portfolio</h3>
+        <p>Discover more visual concepts and design presentations through my Canva portfolio or browse my work on Contra.</p>
+        <div class="portfolio-links">
+          <a class="btn btn-primary" href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">Explore My Canva Portfolio ↗</a>
+          <a class="btn btn-outline" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">View My Contra Projects ↗</a>
+        </div>
       </div>
 
       <div class="project-grid">
-        <article class="project">
-          <a href="https://contra.com/community/CB3kQrj2-luxury-visual-identity-and-premium-packaging" target="_blank" rel="noopener" aria-label="View JOU Atelier project">
-            <div class="project-image">
-              <img src="https://media.contra.com/image/upload/w_1100/fu1y4hz8o717iymidsbk.avif" alt="JOU Atelier luxury visual identity and packaging" loading="lazy">
-            </div>
-          </a>
-          <div class="project-info">
-            <div class="project-meta"><span>01 / Brand Identity</span><span>Luxury</span></div>
-            <h3>JOU Atelier</h3>
-            <p>A refined visual identity and premium packaging direction combining deep blue, warm gold, and understated elegance.</p>
-            <a class="project-link" href="https://contra.com/community/CB3kQrj2-luxury-visual-identity-and-premium-packaging" target="_blank" rel="noopener">Explore project ↗</a>
-          </div>
-        </article>
-
-        <article class="project">
-          <a href="https://contra.com/community/fz67Chpi-custom-multi-panel-t-shirt-collection-with-cinematic" target="_blank" rel="noopener" aria-label="View Catch Umbrella project">
-            <div class="project-image">
-              <img src="https://media.contra.com/image/upload/h_1100/sjgylv1gjlu2ql93mygi.avif" alt="Catch Umbrella cinematic multi-panel apparel design" loading="lazy">
-            </div>
-          </a>
-          <div class="project-info">
-            <div class="project-meta"><span>02 / Apparel Design</span><span>Storytelling</span></div>
-            <h3>Catch Umbrella</h3>
-            <p>A cinematic multi-panel T-shirt concept that transforms a simple narrative into a connected visual experience.</p>
-            <a class="project-link" href="https://contra.com/community/fz67Chpi-custom-multi-panel-t-shirt-collection-with-cinematic" target="_blank" rel="noopener">Explore project ↗</a>
-          </div>
-        </article>
-
-        <article class="project">
-          <a href="https://contra.com/community/K3Xj3VLU-luxury-calligraphic-logo-design-and-minimalist" target="_blank" rel="noopener" aria-label="View calligraphic logo project">
-            <div class="project-image">
-              <img src="https://media.contra.com/image/upload/w_1100/fahrejuqf23pxm7gu9lu.avif" alt="Minimalist gold-on-black calligraphic logo concepts" loading="lazy">
-            </div>
-          </a>
-          <div class="project-info">
-            <div class="project-meta"><span>03 / Logo Design</span><span>Minimal</span></div>
-            <h3>Calligraphic Identity</h3>
-            <p>Elegant lettering and expressive forms explore a distinctive balance of simplicity, symbolism, and luxury.</p>
-            <a class="project-link" href="https://contra.com/community/K3Xj3VLU-luxury-calligraphic-logo-design-and-minimalist" target="_blank" rel="noopener">Explore project ↗</a>
-          </div>
-        </article>
-
-        <article class="project">
-          <a href="https://contra.com/community/qD1ic2k7-high-end-custom-business-cards-and-premium" target="_blank" rel="noopener" aria-label="View JOL business card project">
-            <div class="project-image">
-              <img src="https://media.contra.com/image/upload/w_1100/nawufyosd6v3mlkwbri6.avif" alt="JOL premium business cards and tactile branding" loading="lazy">
-            </div>
-          </a>
-          <div class="project-info">
-            <div class="project-meta"><span>04 / Print Design</span><span>Premium</span></div>
-            <h3>JOL Business Cards</h3>
-            <p>A tactile business-card presentation focused on refined typography, thoughtful materials, and memorable details.</p>
-            <a class="project-link" href="https://contra.com/community/qD1ic2k7-high-end-custom-business-cards-and-premium" target="_blank" rel="noopener">Explore project ↗</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="all-work">
-        <a class="button-outline" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener">View Full Contra Portfolio ↗</a>
+        <a class="project" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">
+          <small>01 / Brand Identity</small>
+          <h3>JOU Atelier</h3>
+          <p>Luxury brand identity and premium packaging.</p>
+          <span class="project-link">Explore project ↗</span>
+        </a>
+        <a class="project" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">
+          <small>02 / Visual Design</small>
+          <h3>Catch Umbrella</h3>
+          <p>Apparel graphics and visual storytelling.</p>
+          <span class="project-link">Explore project ↗</span>
+        </a>
+        <a class="project" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">
+          <small>03 / Logo Design</small>
+          <h3>Signature Marks</h3>
+          <p>Distinctive logo concepts and brand identity.</p>
+          <span class="project-link">Explore project ↗</span>
+        </a>
+        <a class="project" href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">
+          <small>04 / Packaging & Print</small>
+          <h3>JOL Brand Kit</h3>
+          <p>Business cards, print design and brand presentation.</p>
+          <span class="project-link">Explore portfolio ↗</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="services" id="services">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow">What We Do</div>
-          <h2>Good design earns attention.</h2>
-        </div>
-        <p>Creative solutions built around your brand's personality, audience, and ambitions.</p>
-      </div>
+  <section id="services">
+    <div class="container">
+      <div class="eyebrow">What I Do</div>
+      <h2>Creative ideas.<br>Beautiful execution.</h2>
+      <p class="section-intro">Thoughtful design solutions that help businesses build a consistent and memorable visual identity.</p>
 
-      <div class="service-grid">
-        <article class="service">
-          <div class="service-num">01 / IDENTITY</div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-number">01 / IDENTITY</div>
           <h3>Brand Identity</h3>
-          <p>Logo concepts, typography, color systems, and visual direction that help your brand become recognizable and consistent.</p>
+          <p>Logos, typography, color palettes and cohesive visual guidelines.</p>
         </article>
-        <article class="service">
-          <div class="service-num">02 / PACKAGING</div>
+        <article class="service-card">
+          <div class="service-number">02 / PACKAGING</div>
           <h3>Premium Packaging</h3>
-          <p>Product packaging concepts and polished mockups designed to create shelf appeal and a memorable unboxing experience.</p>
+          <p>Creative packaging concepts and realistic product mockups.</p>
         </article>
-        <article class="service">
-          <div class="service-num">03 / VISUALS</div>
-          <h3>Marketing & Mockups</h3>
-          <p>Business cards, promotional graphics, product presentations, and branded visual assets for digital and print use.</p>
+        <article class="service-card">
+          <div class="service-number">03 / LOGO</div>
+          <h3>Logo Design</h3>
+          <p>Distinctive logos, monograms and memorable brand symbols.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-number">04 / PRINT</div>
+          <h3>Print Design</h3>
+          <p>Business cards, brochures, menus and professional stationery.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-number">05 / DIGITAL</div>
+          <h3>Social Media</h3>
+          <p>Eye-catching graphics and promotional visual content.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-number">06 / PRESENTATION</div>
+          <h3>Brand Presentations</h3>
+          <p>Professional portfolio decks and visual presentations.</p>
         </article>
       </div>
     </div>
   </section>
 
   <section id="about">
-    <div class="wrap about-grid">
-      <div class="about-mark" aria-label="GraphAdda monogram">G<span>A</span>.</div>
-      <div class="about-copy">
-        <div class="eyebrow">The Studio</div>
-        <h2>Small details.<br>Stronger brands.</h2>
-        <p>
-          GraphAdda Studio is an independent creative design practice focused on
-          branding, logo design, packaging, and visual presentation.
-        </p>
-        <p>
-          Led by Murad Mazharul, Branding & Packaging Specialist, the studio
-          approaches each project with curiosity, care, and a focus on creating
-          visuals that feel intentional rather than ordinary.
-        </p>
-        <p>
-          Working with clients and creative opportunities worldwide, GraphAdda
-          aims to turn good ideas into clear, distinctive brand experiences.
-        </p>
-        <div class="pills">
-          <span>Brand Strategy</span>
-          <span>Logo Design</span>
-          <span>Packaging</span>
-          <span>Visual Storytelling</span>
-          <span>Mockup Design</span>
+    <div class="container about-grid">
+      <div>
+        <div class="eyebrow">Behind GraphAdda</div>
+        <h2>Small studio.<br>Big attention to detail.</h2>
+      </div>
+      <div>
+        <p class="about-copy">I'm Murad, the designer behind GraphAdda Studio. I help transform ideas into thoughtful visual identities, premium packaging and memorable brand experiences. My approach combines creative exploration, clear communication and a focus on the details that matter.</p>
+        <div class="values" style="margin-top:24px">
+          <div class="value">01 — Purposeful Design</div>
+          <div class="value">02 — Attention to Detail</div>
+          <div class="value">03 — Creative Partnership</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="wrap contact-grid">
-      <div>
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
         <div class="eyebrow">Have a Project in Mind?</div>
-        <h2>Let's make something worth remembering.</h2>
-        <p>Tell us about your idea. Let's explore how thoughtful design can help your brand stand out.</p>
-        <div class="contact-actions">
-          <a class="button" href="mailto:graphadda@gmail.com?subject=Project%20Inquiry%20-%20GraphAdda%20Studio">Email GraphAdda ↗</a>
-          <a class="button-outline" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener">Connect on Contra ↗</a>
+        <h2>Let's create something<br>remarkable.</h2>
+        <p>Have an idea for your brand? Get in touch and let's turn your vision into thoughtful design.</p>
+        <div class="actions">
+          <button class="btn btn-primary" type="button" data-contact>Let's Talk ↗</button>
+          <a class="btn btn-outline" href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">Canva Portfolio ↗</a>
+          <a class="btn btn-outline" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">Hire Me on Contra ↗</a>
         </div>
       </div>
     </div>
@@ -611,44 +440,75 @@ footer { padding: 26px 0; }
 </main>
 
 <footer>
-  <div class="wrap footer-inner">
+  <div class="container footer-inner">
+    <div>© 2026 GraphAdda Studio. Designed with purpose.</div>
     <div>
-      <a class="brand" href="#home">
-        <span class="brand-name">Graph<span class="adda">Adda</span></span>
-        <span class="brand-tag">Studio · Design · Identity</span>
-      </a>
-      <div class="footer-copy" style="margin-top:14px;">© <span id="year">2026</span> GraphAdda Studio. All rights reserved.</div>
-    </div>
-    <div class="footer-links">
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener">Contra ↗</a>
-      <a href="mailto:graphadda@gmail.com">Email ↗</a>
+      <a href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">Canva Portfolio ↗</a>
+      <a href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">Contra ↗</a>
+      <a href="#contact" data-contact>Contact ↗</a>
     </div>
   </div>
 </footer>
 
+<div class="popup-overlay" id="contactPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+  <div class="popup-card">
+    <button class="close-popup" id="closePopup" type="button" aria-label="Close contact window">&times;</button>
+    <div class="eyebrow">Start a Conversation</div>
+    <h2 id="popupTitle">Let's work together.</h2>
+    <p>I'd love to hear about your project. Contact me by email or explore my design portfolio.</p>
+    <a class="email-address" href="mailto:graphadda@gmail.com">graphadda@gmail.com</a>
+    <div class="popup-actions">
+      <button class="btn btn-primary" id="copyEmail" type="button">Copy Email Address</button>
+      <a class="btn btn-outline" href="mailto:graphadda@gmail.com">Open Email App ↗</a>
+      <a class="btn btn-outline" href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">View Canva Portfolio ↗</a>
+      <a class="btn btn-outline" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">Visit Contra Profile ↗</a>
+    </div>
+    <p id="copyStatus" aria-live="polite" style="margin-bottom:0"></p>
+  </div>
+</div>
+
 <script>
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
+(function () {
+  const popup = document.getElementById("contactPopup");
+  const closeButton = document.getElementById("closePopup");
+  const copyButton = document.getElementById("copyEmail");
+  const copyStatus = document.getElementById("copyStatus");
+  const email = "graphadda@gmail.com";
 
-menuToggle.addEventListener("click", function () {
-  const isOpen = mainNav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-  menuToggle.textContent = isOpen ? "✕" : "☰";
-});
+  function openPopup(event) {
+    if (event) event.preventDefault();
+    popup.classList.add("open");
+    closeButton.focus();
+  }
 
-mainNav.querySelectorAll("a").forEach(function (link) {
-  link.addEventListener("click", function () {
-    mainNav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation");
-    menuToggle.textContent = "☰";
+  function closePopup() {
+    popup.classList.remove("open");
+  }
+
+  document.querySelectorAll("[data-contact]").forEach(function (element) {
+    element.addEventListener("click", openPopup);
   });
-});
 
-document.getElementById("year").textContent = new Date().getFullYear();
+  closeButton.addEventListener("click", closePopup);
+
+  popup.addEventListener("click", function (event) {
+    if (event.target === popup) closePopup();
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closePopup();
+  });
+
+  copyButton.addEventListener("click", async function () {
+    try {
+      await navigator.clipboard.writeText(email);
+      copyStatus.textContent = "Email address copied!";
+    } catch (error) {
+      copyStatus.textContent = "Please select and copy the email address shown above.";
+    }
+  });
+})();
 </script>
+
 </body>
 </html>
