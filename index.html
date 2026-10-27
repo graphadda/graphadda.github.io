@@ -508,6 +508,31 @@ footer a { margin-left: 14px; }
     }
   });
 })();
+  
+.project-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  background: #243333;
+}
+
+.project-image-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.project-image-link img {
+  transition: transform .3s ease;
+}
+
+.project-image-link:hover img {
+  transform: scale(1.03);
+}
+
 </script>
 
 </body>
