@@ -1,548 +1,1009 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101b1b">
-<meta name="description" content="GraphAdda Studio creates distinctive brand identities, premium packaging, logo design and visual experiences.">
-<title>GraphAdda Studio | Creative Design & Branding</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#062c30">
+<meta name="description" content="GraphAdda Studio creates premium brand identities, packaging, logo systems and visual design for food, retail and lifestyle brands.">
+<title>GraphAdda Studio — Brand Identity & Packaging</title>
 
 <style>
 :root {
-  --bg: #101b1b;
-  --surface: #172525;
-  --surface-light: #1c3030;
-  --accent: #a9e5c5;
-  --text: #f5f5ef;
-  --muted: #b1bfba;
-  --border: rgba(245,245,239,.13);
+  --ink:#082e31;
+  --deep:#052326;
+  --teal:#0d9b91;
+  --mint:#b9e8d9;
+  --paper:#f4f1e8;
+  --muted:#617473;
+  --line:rgba(8,46,49,.15);
+  --white:#fffdf8;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:Inter,Arial,sans-serif;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: "DM Sans", sans-serif;
-  line-height: 1.7;
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.5;
 }
+a { color:inherit; text-decoration:none; }
+button { font:inherit; cursor:pointer; }
+img { max-width:100%; }
 
-a { color: inherit; text-decoration: none; }
-
-.container { width: min(1120px, 90%); margin: auto; }
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(16,27,27,.94);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
+.wrap {
+  width:min(1200px,calc(100% - 44px));
+  margin:auto;
 }
-
+.topline {
+  height:5px;
+  background:linear-gradient(90deg,var(--teal),#b6e4d3,var(--ink));
+}
 .nav {
-  min-height: 78px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+  gap:22px;
 }
-
-.logo {
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: -.7px;
+.brand {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-weight:800;
+  letter-spacing:-.045em;
+  font-size:1.55rem;
 }
+.brand img {
+  width:47px;
+  height:47px;
+  object-fit:contain;
+  border-radius:50%;
+}
+.brand span { color:var(--teal); }
+.navlinks {
+  display:flex;
+  align-items:center;
+  gap:27px;
+  font-size:.88rem;
+  color:#355454;
+}
+.navlinks a:hover { color:var(--teal); }
 
-.logo span { color: var(--accent); }
+.navcta,.btn {
+  border:0;
+  background:var(--ink);
+  color:white;
+  padding:13px 18px;
+  border-radius:4px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  font-size:.88rem;
+  font-weight:700;
+  transition:.2s;
+}
+.navcta:hover,.btn:hover {
+  background:var(--teal);
+  transform:translateY(-1px);
+}
+.btn.light {
+  background:var(--paper);
+  color:var(--ink);
+  border:1px solid var(--line);
+}
+.btn.light:hover { background:var(--mint); }
 
-nav { display: flex; gap: 25px; align-items: center; }
-
-nav a { font-size: .9rem; color: var(--muted); }
-nav a:hover, footer a:hover { color: var(--accent); }
-
-.hero { padding: 110px 0 100px; }
-
+.hero {
+  display:grid;
+  grid-template-columns:.88fr 1.12fr;
+  gap:44px;
+  align-items:center;
+  padding:64px 0 68px;
+  min-height:580px;
+}
 .eyebrow {
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: .75rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.19em;
+  font-weight:800;
+  color:var(--teal);
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
-
-h1, h2, h3 { line-height: 1.2; }
-
-h1, h2 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-weight: 500;
+.eyebrow:before {
+  content:"";
+  width:27px;
+  height:1px;
+  background:currentColor;
 }
-
-h1 {
-  max-width: 800px;
-  font-size: clamp(3.2rem, 8vw, 6.4rem);
-  letter-spacing: -3px;
+.hero h1 {
+  font:clamp(3.2rem,6.3vw,6.2rem)/.96 var(--serif);
+  letter-spacing:-.065em;
+  margin:20px 0 24px;
+  font-weight:500;
+  max-width:620px;
 }
-
-h1 span { color: var(--accent); }
-
+.hero h1 em { color:var(--teal); font-weight:400; }
 .hero p {
-  max-width: 620px;
-  margin: 25px 0 30px;
-  color: var(--muted);
-  font-size: 1.08rem;
+  font-size:1.05rem;
+  line-height:1.8;
+  color:#4d6564;
+  max-width:480px;
+}
+.hero-actions {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+.trustline {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:34px;
+  color:#56706e;
+  font-size:.78rem;
+}
+.trustline span {
+  display:flex;
+  gap:7px;
+  align-items:center;
+}
+.dot {
+  width:6px;
+  height:6px;
+  background:var(--teal);
+  border-radius:50%;
 }
 
-.actions { display: flex; flex-wrap: wrap; gap: 12px; }
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 13px 20px;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  font: inherit;
-  font-size: .9rem;
-  font-weight: 700;
-  transition: .2s ease;
-  cursor: pointer;
+.showcase { position:relative; min-width:0; }
+.showcase-frame {
+  height:430px;
+  background:var(--deep);
+  border-radius:8px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 28px 60px rgba(5,35,38,.15);
+}
+.slide {
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity .8s ease;
+}
+.slide.active { opacity:1; }
+.slide img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.slide:after {
+  content:"";
+  position:absolute;
+  inset:45% 0 0;
+  background:linear-gradient(transparent,rgba(3,24,26,.82));
+}
+.slide-caption {
+  position:absolute;
+  z-index:2;
+  bottom:26px;
+  left:27px;
+  right:27px;
+  color:white;
+}
+.slide-caption small {
+  color:#a8e6d9;
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  font-size:.67rem;
+}
+.slide-caption h3 {
+  font:2rem/1.05 var(--serif);
+  font-weight:400;
+  margin:7px 0 0;
+}
+.showcase-tag {
+  position:absolute;
+  right:-13px;
+  top:24px;
+  background:var(--mint);
+  padding:12px 16px;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:800;
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  z-index:3;
+}
+.slide-controls {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:15px;
+}
+.dots { display:flex; gap:7px; }
+.dots button {
+  width:26px;
+  height:4px;
+  border:0;
+  background:#c7d2c8;
+  padding:0;
+}
+.dots button.active { background:var(--teal); }
+.slide-count {
+  font-size:.75rem;
+  color:var(--muted);
+  letter-spacing:.08em;
 }
 
-.btn-primary { background: var(--accent); color: #10201a; border-color: var(--accent); }
-.btn-primary:hover { background: #c4f0d6; transform: translateY(-2px); }
-.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-
-section { padding: 80px 0; border-top: 1px solid var(--border); }
-
-.section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 25px;
-  margin-bottom: 28px;
+.section { padding:78px 0; }
+.section.dark {
+  background:var(--deep);
+  color:var(--paper);
 }
-
-h2 { font-size: clamp(2.1rem, 5vw, 3.5rem); letter-spacing: -1px; }
-
-.section-intro { color: var(--muted); max-width: 620px; margin-top: 15px; }
-
-.portfolio-panel {
-  padding: 30px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--surface), #152020);
+.section-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:28px;
+  margin-bottom:30px;
 }
-
-.portfolio-panel h3 { font-size: 1.35rem; margin-bottom: 10px; }
-
-.portfolio-panel p { color: var(--muted); margin-bottom: 22px; }
-
-.portfolio-links { display: flex; flex-wrap: wrap; gap: 12px; }
+.section h2 {
+  font:clamp(2.4rem,4vw,4.2rem)/1 var(--serif);
+  font-weight:400;
+  letter-spacing:-.045em;
+  margin:12px 0 0;
+}
+.section-head p {
+  max-width:390px;
+  color:var(--muted);
+  margin:0;
+}
+.dark .section-head p { color:#aac0bd; }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 24px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:19px;
 }
-
-.project {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 25px;
-  transition: .2s ease;
+.project-card {
+  border:1px solid var(--line);
+  background:var(--white);
+  padding:0;
+  text-align:left;
+  color:var(--ink);
+  border-radius:6px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:transform .25s,box-shadow .25s;
 }
-
-.project:hover { transform: translateY(-3px); border-color: var(--accent); }
-
-.project small {
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: .7rem;
+.project-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 18px 36px #062c3017;
 }
-
-.project h3 { font-size: 1.3rem; margin: 10px 0; }
-.project p { color: var(--muted); font-size: .9rem; }
-.project .project-link { display: inline-block; margin-top: 15px; font-size: .88rem; font-weight: 700; }
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 30px;
+.project-card img {
+  width:100%;
+  aspect-ratio:1.38;
+  object-fit:cover;
+  display:block;
+  background:#d9d3c6;
 }
-
-.service-card {
-  padding: 25px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+.project-info { padding:17px 18px 20px; }
+.project-info small {
+  font-size:.67rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--teal);
+  font-weight:800;
 }
-
-.service-number { color: var(--accent); font-size: .8rem; letter-spacing: 2px; }
-.service-card h3 { margin: 13px 0 10px; font-size: 1.2rem; }
-.service-card p { color: var(--muted); font-size: .92rem; }
+.project-info h3 {
+  font:1.45rem/1.15 var(--serif);
+  font-weight:400;
+  margin:7px 0;
+}
+.project-info p {
+  font-size:.84rem;
+  color:#667977;
+  margin:0;
+}
+.view-all {
+  margin-top:27px;
+  display:flex;
+  justify-content:center;
+}
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 45px;
-  align-items: start;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:65px;
+  align-items:start;
+}
+.about-lead {
+  font:clamp(2.2rem,4vw,3.6rem)/1.08 var(--serif);
+  letter-spacing:-.04em;
+  margin:14px 0;
+}
+.about-copy { color:#536b69; max-width:520px; }
+.pillars {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:13px;
+  margin-top:28px;
+}
+.pillar {
+  padding:20px 17px;
+  background:#e9e5d9;
+  border-top:2px solid var(--teal);
+  min-height:170px;
+}
+.pillar .num {
+  font-size:.72rem;
+  color:var(--teal);
+  font-weight:800;
+  letter-spacing:.1em;
+}
+.pillar h3 {
+  font:1.35rem var(--serif);
+  margin:14px 0 8px;
+  font-weight:400;
+}
+.pillar p {
+  font-size:.82rem;
+  color:#5d716f;
+  margin:0;
 }
 
-.about-copy { color: var(--muted); }
-.values { display: grid; gap: 12px; }
-.value { padding: 15px 18px; border-left: 2px solid var(--accent); background: var(--surface); }
-
-.contact-box {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: clamp(25px, 5vw, 55px);
+.services {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+.service {
+  border:1px solid #24474a;
+  border-radius:5px;
+  padding:22px 20px;
+  min-height:245px;
+  display:flex;
+  flex-direction:column;
+}
+.service .icon {
+  width:39px;
+  height:39px;
+  border:1px solid #4c8e86;
+  color:#a8e6d9;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  font-size:1.05rem;
+}
+.service h3 {
+  font:1.4rem var(--serif);
+  font-weight:400;
+  margin:24px 0 9px;
+}
+.service p {
+  font-size:.84rem;
+  color:#adc1bd;
+  margin:0 0 20px;
+}
+.service a {
+  font-size:.78rem;
+  color:#b8e8d9;
+  font-weight:700;
+  margin-top:auto;
+}
+.service:hover {
+  background:#0a3437;
+  border-color:#3b8b81;
+}
+.process {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border-top:1px solid var(--line);
+  margin-top:35px;
+}
+.process article { padding:22px 22px 0 0; }
+.process .n {
+  font-size:.75rem;
+  color:var(--teal);
+  font-weight:800;
+}
+.process h3 {
+  font:1.3rem var(--serif);
+  font-weight:400;
+  margin:12px 0 7px;
+}
+.process p {
+  font-size:.82rem;
+  color:var(--muted);
+  margin:0;
 }
 
-.contact-box p { color: var(--muted); margin: 16px 0 25px; max-width: 600px; }
+.contact {
+  background:var(--mint);
+  padding:58px 0;
+}
+.contact-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+}
+.contact h2 {
+  font:clamp(2.4rem,4vw,4rem)/1 var(--serif);
+  font-weight:400;
+  letter-spacing:-.05em;
+  margin:10px 0;
+}
+.contact p { color:#385e5b; max-width:510px; }
+.contact-actions {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  min-width:220px;
+}
+.contact-actions .btn { white-space:nowrap; }
 
-footer {
-  padding: 30px 0;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: .85rem;
+.footer {
+  background:var(--deep);
+  color:var(--paper);
+  padding:28px 0;
+}
+.footer-inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.footer .brand { font-size:1.2rem; }
+.footer .brand img { width:35px; height:35px; }
+.footer small { color:#9eb4b1; }
+.social {
+  display:flex;
+  gap:18px;
+  font-size:.82rem;
+  color:#c7d9d5;
+}
+.float-wa {
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:10;
+  background:#087f70;
+  color:white;
+  border-radius:999px;
+  padding:13px 17px;
+  box-shadow:0 8px 28px #062c3030;
+  font-size:.85rem;
+  font-weight:800;
 }
 
-.footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
-footer a { margin-left: 14px; }
-
-.popup-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  padding: 20px;
-  background: rgba(0,0,0,.75);
-  align-items: center;
-  justify-content: center;
+.modal {
+  position:fixed;
+  inset:0;
+  display:none;
+  place-items:center;
+  background:rgba(1,17,19,.72);
+  padding:20px;
+  z-index:50;
+}
+.modal.open { display:grid; }
+.modal-box {
+  width:min(800px,100%);
+  max-height:90vh;
+  overflow:auto;
+  background:var(--paper);
+  border-radius:8px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  position:relative;
+}
+.modal-box img {
+  width:100%;
+  height:100%;
+  min-height:340px;
+  object-fit:cover;
+}
+.modal-copy { padding:34px; }
+.modal-copy h2 {
+  font:2.2rem/1.05 var(--serif);
+  font-weight:400;
+}
+.modal-copy p { color:#5a706e; }
+.taglist {
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin:20px 0;
+}
+.taglist span {
+  font-size:.7rem;
+  padding:6px 8px;
+  background:#e4e0d4;
+  border-radius:3px;
+}
+.close {
+  position:absolute;
+  right:12px;
+  top:12px;
+  border:0;
+  background:white;
+  border-radius:50%;
+  width:36px;
+  height:36px;
+  font-size:1.3rem;
+  z-index:2;
+  color:var(--ink);
 }
 
-.popup-overlay.open { display: flex; }
-
-.popup-card {
-  position: relative;
-  width: min(440px, 100%);
-  padding: 32px;
-  border-radius: 12px;
-  background: #172525;
-  border: 1px solid rgba(169,229,197,.4);
-  box-shadow: 0 25px 80px rgba(0,0,0,.4);
+@media(max-width:900px) {
+  .hero { grid-template-columns:1fr; padding-top:44px; }
+  .hero-copy { max-width:700px; }
+  .showcase-frame { height:390px; }
+  .project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .about-grid { grid-template-columns:1fr; gap:20px; }
+  .services { grid-template-columns:repeat(2,1fr); }
+  .section-head { align-items:start; flex-direction:column; }
+  .contact-inner { align-items:flex-start; flex-direction:column; }
+  .contact-actions { flex-direction:row; flex-wrap:wrap; }
 }
-
-.popup-card h2 { font-size: 2rem; margin-bottom: 10px; }
-.popup-card p { color: var(--muted); margin: 12px 0 20px; }
-
-.close-popup {
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  border: 0;
-  background: transparent;
-  color: var(--text);
-  font-size: 1.8rem;
-  cursor: pointer;
+@media(max-width:580px) {
+  .wrap { width:min(100% - 28px,1200px); }
+  .nav { padding:13px 0; }
+  .brand { font-size:1.25rem; }
+  .brand img { width:39px; height:39px; }
+  .navlinks { gap:12px; }
+  .navlinks a:not(.navcta) { display:none; }
+  .navcta { padding:10px 12px; }
+  .hero h1 { font-size:3.25rem; }
+  .showcase-frame { height:320px; }
+  .showcase-tag { right:-5px; }
+  .section { padding:55px 0; }
+  .project-grid { grid-template-columns:1fr 1fr; gap:10px; }
+  .project-info { padding:12px; }
+  .project-info h3 { font-size:1.15rem; }
+  .project-info p { font-size:.76rem; }
+  .pillars { grid-template-columns:1fr; }
+  .pillar { min-height:0; }
+  .services { grid-template-columns:1fr 1fr; gap:9px; }
+  .service { padding:16px; min-height:240px; }
+  .service h3 { font-size:1.2rem; margin-top:18px; }
+  .process { grid-template-columns:1fr 1fr; row-gap:22px; }
+  .modal-box { grid-template-columns:1fr; }
+  .modal-box img { height:220px; min-height:0; }
+  .modal-copy { padding:23px; }
+  .float-wa { right:12px; bottom:12px; }
+  .footer-inner { align-items:flex-start; flex-direction:column; }
 }
-
-.email-address {
-  display: block;
-  padding: 13px;
-  margin-bottom: 14px;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  color: var(--accent);
-  overflow-wrap: anywhere;
-}
-
-.popup-actions { display: grid; gap: 10px; }
-.popup-actions .btn { width: 100%; }
-
-@media (max-width: 760px) {
-  .nav { padding: 14px 0; align-items: flex-start; flex-direction: column; gap: 10px; }
-  nav { gap: 16px; flex-wrap: wrap; }
-  nav a { font-size: .82rem; }
-  .hero { padding: 75px 0; }
-  h1 { letter-spacing: -1.5px; }
-  section { padding: 60px 0; }
-  .section-heading { align-items: flex-start; flex-direction: column; }
-  .project-grid, .services-grid, .about-grid { grid-template-columns: 1fr; }
-  .portfolio-panel { padding: 22px; }
-  .footer-inner { flex-direction: column; }
-  footer a { margin-left: 0; margin-right: 14px; }
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  *,*:before,*:after { transition:none!important; animation:none!important; }
 }
 </style>
 </head>
 
 <body>
+<div class="topline"></div>
 
-<header>
-  <div class="container nav">
-    <a class="logo" href="#home">GraphAdda <span>Studio.</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#portfolio">Portfolio</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact" data-contact>Let's Talk ↗</a>
-    </nav>
-  </div>
+<header class="wrap nav">
+  <a class="brand" href="#home" aria-label="GraphAdda home">
+    <img src="assets/graphadda-logo.png" alt="GraphAdda logo">
+    <div>Graph<span>Adda</span></div>
+  </a>
+  <nav class="navlinks" aria-label="Main navigation">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a class="navcta" href="#contact">Start a project ↗</a>
+  </nav>
 </header>
 
-<main>
-  <div class="container hero" id="home">
-    <div class="eyebrow">Independent Creative Studio</div>
-    <h1>Make your brand <span>impossible to ignore.</span></h1>
-    <p>Distinctive brand identities, memorable logos and premium packaging for businesses ready to look as good as their ideas.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="#portfolio">Explore My Work ↓</a>
-      <a class="btn btn-outline" href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">View Canva Portfolio ↗</a>
-      <a class="btn btn-outline" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">View Contra ↗</a>
+<main id="home">
+
+<section class="wrap hero">
+  <div class="hero-copy">
+    <div class="eyebrow">Independent design studio</div>
+    <h1>Make your brand <em>impossible</em> to ignore.</h1>
+    <p>GraphAdda creates distinctive brand identities, premium packaging and thoughtful visual design for food, retail and lifestyle businesses.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#work">Explore selected work <span>↗</span></a>
+      <a class="btn light" href="#services">What we do</a>
+    </div>
+    <div class="trustline">
+      <span><i class="dot"></i> Brand identity</span>
+      <span><i class="dot"></i> Packaging & mockups</span>
+      <span><i class="dot"></i> Campaign design</span>
     </div>
   </div>
 
-  <section id="portfolio">
-    <div class="container">
-      <div class="eyebrow">Selected Projects</div>
-      <div class="section-heading">
-        <div>
-          <h2>Design that leaves<br>a lasting impression.</h2>
-          <p class="section-intro">Explore branding, packaging, logo and visual design work created with care and attention to detail.</p>
+  <div class="showcase">
+    <div class="showcase-tag">Selected concepts · 2026</div>
+    <div class="showcase-frame" id="showcaseFrame">
+      <div class="slide active">
+        <img src="assets/ark-packaging.jpg" alt="ARK premium brand packaging">
+        <div class="slide-caption">
+          <small>01 / Brand identity</small>
+          <h3>Designed to feel like a brand.</h3>
         </div>
       </div>
-
-      <div class="portfolio-panel">
-        <h3>Explore the complete portfolio</h3>
-        <p>Discover more visual concepts and design presentations through my Canva portfolio or browse my work on Contra.</p>
-        <div class="portfolio-links">
-          <a class="btn btn-primary" href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">Explore My Canva Portfolio ↗</a>
-          <a class="btn btn-outline" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">View My Contra Projects ↗</a>
+      <div class="slide">
+        <img src="assets/kinbay-packaging.jpg" alt="Premium product packaging concept">
+        <div class="slide-caption">
+          <small>02 / Product presentation</small>
+          <h3>Every detail tells a story.</h3>
         </div>
       </div>
-
-      <div class="project-grid">
-        <a class="project" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">
-          <small>01 / Brand Identity</small>
-          <h3>JOU Atelier</h3>
-          <p>Luxury brand identity and premium packaging.</p>
-          <span class="project-link">Explore project ↗</span>
-        </a>
-        <a class="project" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">
-          <small>02 / Visual Design</small>
-          <h3>Catch Umbrella</h3>
-          <p>Apparel graphics and visual storytelling.</p>
-          <span class="project-link">Explore project ↗</span>
-        </a>
-        <a class="project" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">
-          <small>03 / Logo Design</small>
-          <h3>Signature Marks</h3>
-          <p>Distinctive logo concepts and brand identity.</p>
-          <span class="project-link">Explore project ↗</span>
-        </a>
-        <a class="project" href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">
-          <small>04 / Packaging & Print</small>
-          <h3>JOL Brand Kit</h3>
-          <p>Business cards, print design and brand presentation.</p>
-          <span class="project-link">Explore portfolio ↗</span>
-        </a>
+      <div class="slide">
+        <img src="assets/kole-cafe.jpg" alt="Kole and Cafe identity mockups">
+        <div class="slide-caption">
+          <small>03 / Hospitality branding</small>
+          <h3>Consistency, from first glance to last sip.</h3>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="assets/jol-branding.jpg" alt="JOL lifestyle identity mockups">
+        <div class="slide-caption">
+          <small>04 / Lifestyle identity</small>
+          <h3>Small details. Strong recognition.</h3>
+        </div>
       </div>
     </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-      <div class="eyebrow">What I Do</div>
-      <h2>Creative ideas.<br>Beautiful execution.</h2>
-      <p class="section-intro">Thoughtful design solutions that help businesses build a consistent and memorable visual identity.</p>
-
-      <div class="services-grid">
-        <article class="service-card">
-          <div class="service-number">01 / IDENTITY</div>
-          <h3>Brand Identity</h3>
-          <p>Logos, typography, color palettes and cohesive visual guidelines.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-number">02 / PACKAGING</div>
-          <h3>Premium Packaging</h3>
-          <p>Creative packaging concepts and realistic product mockups.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-number">03 / LOGO</div>
-          <h3>Logo Design</h3>
-          <p>Distinctive logos, monograms and memorable brand symbols.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-number">04 / PRINT</div>
-          <h3>Print Design</h3>
-          <p>Business cards, brochures, menus and professional stationery.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-number">05 / DIGITAL</div>
-          <h3>Social Media</h3>
-          <p>Eye-catching graphics and promotional visual content.</p>
-        </article>
-        <article class="service-card">
-          <div class="service-number">06 / PRESENTATION</div>
-          <h3>Brand Presentations</h3>
-          <p>Professional portfolio decks and visual presentations.</p>
-        </article>
+    <div class="slide-controls">
+      <div class="dots" aria-label="Showcase slides">
+        <button class="active" aria-label="Show slide 1"></button>
+        <button aria-label="Show slide 2"></button>
+        <button aria-label="Show slide 3"></button>
+        <button aria-label="Show slide 4"></button>
+      </div>
+      <div class="slide-count">
+        <span id="slideCurrent">01</span> / 04 · Auto showcase
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="about">
-    <div class="container about-grid">
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head">
       <div>
-        <div class="eyebrow">Behind GraphAdda</div>
-        <h2>Small studio.<br>Big attention to detail.</h2>
+        <div class="eyebrow">The portfolio</div>
+        <h2>Selected work & concepts</h2>
       </div>
-      <div>
-        <p class="about-copy">I'm Murad, the designer behind GraphAdda Studio. I help transform ideas into thoughtful visual identities, premium packaging and memorable brand experiences. My approach combines creative exploration, clear communication and a focus on the details that matter.</p>
-        <div class="values" style="margin-top:24px">
-          <div class="value">01 — Purposeful Design</div>
-          <div class="value">02 — Attention to Detail</div>
-          <div class="value">03 — Creative Partnership</div>
-        </div>
-      </div>
+      <p>A selection of brand systems, packaging, editorial layouts and visual explorations. Select any project to see its focus and design scope.</p>
     </div>
-  </section>
+    <div class="project-grid" id="projectGrid"></div>
+    <div class="view-all">
+      <a class="btn light" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener">Browse the full Contra gallery ↗</a>
+    </div>
+  </div>
+</section>
 
-  <section id="contact">
-    <div class="container">
-      <div class="contact-box">
-        <div class="eyebrow">Have a Project in Mind?</div>
-        <h2>Let's create something<br>remarkable.</h2>
-        <p>Have an idea for your brand? Get in touch and let's turn your vision into thoughtful design.</p>
-        <div class="actions">
-          <button class="btn btn-primary" type="button" data-contact>Let's Talk ↗</button>
-          <a class="btn btn-outline" href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">Canva Portfolio ↗</a>
-          <a class="btn btn-outline" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">Hire Me on Contra ↗</a>
-        </div>
+<section class="section" id="about" style="background:#e9e5d9">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow">About GraphAdda</div>
+      <h2 class="about-lead">Good design is more than a good-looking logo.</h2>
+      <p class="about-copy">It is a recognisable idea carried consistently across every place a customer meets your brand.</p>
+    </div>
+    <div>
+      <p class="about-copy">GraphAdda is an independent graphic design studio focused on turning ideas into polished visual identities. From the first mark to the final mockup, the goal is simple: make the brand feel clear, cohesive and ready to meet its audience.</p>
+      <div class="pillars">
+        <article class="pillar">
+          <div class="num">01 / THINK</div>
+          <h3>Understand the brand</h3>
+          <p>We start with the audience, personality and purpose, so the design has a clear direction.</p>
+        </article>
+        <article class="pillar">
+          <div class="num">02 / BUILD</div>
+          <h3>Create the identity</h3>
+          <p>Logo, colour, typography and supporting visuals work together as one recognisable system.</p>
+        </article>
+        <article class="pillar">
+          <div class="num">03 / APPLY</div>
+          <h3>Make it tangible</h3>
+          <p>Mockups and real-world applications help you picture how the brand shows up in the world.</p>
+        </article>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="section dark" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Services</div>
+        <h2>Design that works<br>as hard as your brand.</h2>
+      </div>
+      <p>Choose a focused deliverable or bring the pieces together into a consistent visual system.</p>
+    </div>
+
+    <div class="services">
+      <article class="service">
+        <div class="icon">✳</div>
+        <h3>Logo & Brand Identity</h3>
+        <p>Distinctive logos, colour palettes, typography and visual guidelines that make your business recognisable.</p>
+        <a href="#contact">Discuss identity ↗</a>
+      </article>
+      <article class="service">
+        <div class="icon">▧</div>
+        <h3>Packaging & Product</h3>
+        <p>Packaging concepts, labels and polished product mockups designed to create a premium first impression.</p>
+        <a href="#contact">Discuss packaging ↗</a>
+      </article>
+      <article class="service">
+        <div class="icon">▤</div>
+        <h3>Social & Campaign Design</h3>
+        <p>Scroll-stopping promotional creatives, launch visuals and campaign assets that stay true to your brand.</p>
+        <a href="#contact">Discuss a campaign ↗</a>
+      </article>
+      <article class="service">
+        <div class="icon">◫</div>
+        <h3>Menus & Editorial</h3>
+        <p>Thoughtful menus, brochures, flyers and layouts that make information feel clear and beautifully considered.</p>
+        <a href="#contact">Discuss print design ↗</a>
+      </article>
+    </div>
+
+    <div class="process">
+      <article>
+        <div class="n">01 — DISCOVER</div>
+        <h3>Define the brief</h3>
+        <p>Goals, audience, references and deliverables.</p>
+      </article>
+      <article>
+        <div class="n">02 — DESIGN</div>
+        <h3>Explore directions</h3>
+        <p>Build a considered visual route for the brand.</p>
+      </article>
+      <article>
+        <div class="n">03 — REFINE</div>
+        <h3>Polish the details</h3>
+        <p>Refine the selected direction into a cohesive result.</p>
+      </article>
+      <article>
+        <div class="n">04 — DELIVER</div>
+        <h3>Prepare the assets</h3>
+        <p>Organised files and presentation-ready visuals.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-inner">
+    <div>
+      <div class="eyebrow">Have a project in mind?</div>
+      <h2>Let’s make it memorable.</h2>
+      <p>Tell me what you’re building and where you want your brand to go. We can start with a logo, a packaging concept, or a complete visual identity.</p>
+    </div>
+    <div class="contact-actions">
+      <a class="btn" href="mailto:graphadda@gmail.com?subject=Project%20enquiry%20%E2%80%94%20GraphAdda">✉ Email GraphAdda</a>
+      <a class="btn light" href="https://wa.me/966591239810" target="_blank" rel="noopener">◉ WhatsApp / Call</a>
+      <a class="btn light" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener">Message on Contra ↗</a>
+    </div>
+  </div>
+</section>
+
 </main>
 
-<footer>
-  <div class="container footer-inner">
-    <div>© 2026 GraphAdda Studio. Designed with purpose.</div>
-    <div>
-      <a href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">Canva Portfolio ↗</a>
-      <a href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">Contra ↗</a>
-      <a href="#contact" data-contact>Contact ↗</a>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="#home">
+      <img src="assets/graphadda-logo.png" alt="GraphAdda logo">
+      <div>Graph<span>Adda</span></div>
+    </a>
+    <small>© <span id="year"></span> GraphAdda Studio · Brand identity & packaging design</small>
+    <div class="social">
+      <a href="mailto:graphadda@gmail.com">Email</a>
+      <a href="https://wa.me/966591239810" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener">Contra</a>
     </div>
   </div>
 </footer>
 
-<div class="popup-overlay" id="contactPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
-  <div class="popup-card">
-    <button class="close-popup" id="closePopup" type="button" aria-label="Close contact window">&times;</button>
-    <div class="eyebrow">Start a Conversation</div>
-    <h2 id="popupTitle">Let's work together.</h2>
-    <p>I'd love to hear about your project. Contact me by email or explore my design portfolio.</p>
-    <a class="email-address" href="mailto:graphadda@gmail.com">graphadda@gmail.com</a>
-    <div class="popup-actions">
-      <button class="btn btn-primary" id="copyEmail" type="button">Copy Email Address</button>
-      <a class="btn btn-outline" href="mailto:graphadda@gmail.com">Open Email App ↗</a>
-      <a class="btn btn-outline" href="https://canva.link/l0l6s8dbfg9xqdp" target="_blank" rel="noopener noreferrer">View Canva Portfolio ↗</a>
-      <a class="btn btn-outline" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener noreferrer">Visit Contra Profile ↗</a>
+<a class="float-wa" href="https://wa.me/966591239810" target="_blank" rel="noopener" aria-label="Chat with GraphAdda on WhatsApp">◉ WhatsApp</a>
+
+<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="close" id="modalClose" aria-label="Close project details">×</button>
+    <img id="modalImage" src="" alt="">
+    <div class="modal-copy">
+      <div class="eyebrow" id="modalCategory">Project</div>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <div class="taglist" id="modalTags"></div>
+      <p style="font-size:.78rem">Portfolio concept and design presentation. For project-specific case studies, use the full gallery link below.</p>
+      <a class="btn" href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h" target="_blank" rel="noopener">Open Contra gallery ↗</a>
     </div>
-    <p id="copyStatus" aria-live="polite" style="margin-bottom:0"></p>
   </div>
 </div>
 
 <script>
-(function () {
-  const popup = document.getElementById("contactPopup");
-  const closeButton = document.getElementById("closePopup");
-  const copyButton = document.getElementById("copyEmail");
-  const copyStatus = document.getElementById("copyStatus");
-  const email = "graphadda@gmail.com";
-
-  function openPopup(event) {
-    if (event) event.preventDefault();
-    popup.classList.add("open");
-    closeButton.focus();
+const projects = [
+  {
+    name:"KINBAY — Product Identity",
+    category:"Packaging & Product Branding",
+    img:"kinbay-packaging.jpg",
+    desc:"A premium product presentation built around restrained colour, tactile packaging, and a confident shelf presence.",
+    tags:["Packaging","Product mockups","Visual identity"]
+  },
+  {
+    name:"ARK — Retail Brand System",
+    category:"Brand Identity",
+    img:"ark-packaging.jpg",
+    desc:"A coordinated retail identity across packaging, stationery, shopping bags, and merchandise with a dark, refined palette.",
+    tags:["Logo system","Retail packaging","Merchandise"]
+  },
+  {
+    name:"ARK — Lifestyle Collection",
+    category:"Retail & Merchandise",
+    img:"ark-retail.jpg",
+    desc:"A lifestyle-led brand application showing how one identity can remain consistent across apparel accessories and in-store touchpoints.",
+    tags:["Merchandise","Packaging","Art direction"]
+  },
+  {
+    name:"Fashion Editorial Campaign",
+    category:"Campaign Design",
+    img:"fashion-editorial.jpg",
+    desc:"Editorial layout direction for a fashion and accessories campaign, balancing product photography, typography, and a clear visual hierarchy.",
+    tags:["Editorial","Campaigns","Layout design"]
+  },
+  {
+    name:"Apparel Graphic Concepts",
+    category:"Apparel & Print",
+    img:"apparel-graphics.jpg",
+    desc:"Graphic-led apparel concepts developed to make product artwork feel distinctive and presentation-ready.",
+    tags:["Apparel graphics","Print","Mockups"]
+  },
+  {
+    name:"Logo & Monogram Explorations",
+    category:"Logo Design",
+    img:"logo-exploration.jpg",
+    desc:"A focused exploration of expressive letterforms and monograms, with emphasis on proportion, contrast, and premium finish.",
+    tags:["Logo design","Typography","Monograms"]
+  },
+  {
+    name:"Retail Display & Packaging",
+    category:"Retail Branding",
+    img:"retail-display.jpg",
+    desc:"A cohesive retail presentation combining signage, product packaging, and branded touchpoints into one recognisable experience.",
+    tags:["Retail","Packaging","Brand application"]
+  },
+  {
+    name:"Breakfast Menu Design",
+    category:"Food & Hospitality",
+    img:"breakfast-menu.jpg",
+    desc:"A food-focused menu concept designed to make dishes feel inviting through strong hierarchy, warm styling, and appetising imagery.",
+    tags:["Menu design","Hospitality","Print design"]
+  },
+  {
+    name:"Bengal — Antique Engraving",
+    category:"Illustration & Storytelling",
+    img:"bengal-engraving.jpg",
+    desc:"An illustrated heritage concept inspired by Bengal’s river culture, presented with antique engraving textures and archival storytelling.",
+    tags:["Illustration","Concept art","Cultural storytelling"]
+  },
+  {
+    name:"JOL — Lifestyle Identity",
+    category:"Brand Identity",
+    img:"jol-branding.jpg",
+    desc:"A minimal lifestyle identity shown across stationery, apparel, and product mockups with a tactile, contemporary feel.",
+    tags:["Identity","Stationery","Lifestyle"]
+  },
+  {
+    name:"Kole & Cafe — Café Branding",
+    category:"Food & Hospitality",
+    img:"kole-cafe.jpg",
+    desc:"A friendly café identity extended across cups, bags, packaging, and supporting graphics for a consistent customer experience.",
+    tags:["Cafe branding","Packaging","Menu system"]
+  },
+  {
+    name:"Logo Collection — Brand Concepts",
+    category:"Logo Design",
+    img:"logo-collection.jpg",
+    desc:"A selection of distinct logo directions exploring tone, typography, and colour across different fictional brand concepts.",
+    tags:["Logo design","Brand concepts","Typography"]
   }
+];
 
-  function closePopup() {
-    popup.classList.remove("open");
-  }
+const grid = document.getElementById("projectGrid");
 
-  document.querySelectorAll("[data-contact]").forEach(function (element) {
-    element.addEventListener("click", openPopup);
-  });
+projects.forEach((project,index) => {
+  const button = document.createElement("button");
+  button.className = "project-card";
+  button.type = "button";
+  button.innerHTML = `
+    <img src="assets/${project.img}" alt="${project.name}" loading="lazy">
+    <div class="project-info">
+      <small>${project.category}</small>
+      <h3>${project.name}</h3>
+      <p>${project.tags.slice(0,2).join(" · ")} &nbsp; ↗</p>
+    </div>
+  `;
+  button.addEventListener("click", () => openProject(index));
+  grid.appendChild(button);
+});
 
-  closeButton.addEventListener("click", closePopup);
+const modal = document.getElementById("projectModal");
 
-  popup.addEventListener("click", function (event) {
-    if (event.target === popup) closePopup();
-  });
+function openProject(index) {
+  const project = projects[index];
+  document.getElementById("modalImage").src = "assets/" + project.img;
+  document.getElementById("modalImage").alt = project.name;
+  document.getElementById("modalCategory").textContent = project.category;
+  document.getElementById("modalTitle").textContent = project.name;
+  document.getElementById("modalDesc").textContent = project.desc;
+  document.getElementById("modalTags").innerHTML =
+    project.tags.map(tag => `<span>${tag}</span>`).join("");
 
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") closePopup();
-  });
-
-  copyButton.addEventListener("click", async function () {
-    try {
-      await navigator.clipboard.writeText(email);
-      copyStatus.textContent = "Email address copied!";
-    } catch (error) {
-      copyStatus.textContent = "Please select and copy the email address shown above.";
-    }
-  });
-})();
-  
-.project-image {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-  border-radius: 6px;
-  margin-bottom: 18px;
-  background: #243333;
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+  document.getElementById("modalClose").focus();
 }
 
-.project-image-link {
-  display: block;
-  overflow: hidden;
-  border-radius: 6px;
+function closeProject() {
+  modal.classList.remove("open");
+  document.body.style.overflow = "";
 }
 
-.project-image-link img {
-  transition: transform .3s ease;
+document.getElementById("modalClose").addEventListener("click",closeProject);
+
+modal.addEventListener("click",event => {
+  if (event.target === modal) closeProject();
+});
+
+document.addEventListener("keydown",event => {
+  if (event.key === "Escape") closeProject();
+});
+
+const slides = [...document.querySelectorAll(".slide")];
+const dots = [...document.querySelectorAll(".dots button")];
+let current = 0;
+
+function showSlide(index) {
+  current = (index + slides.length) % slides.length;
+
+  slides.forEach((slide,i) => {
+    slide.classList.toggle("active",i === current);
+  });
+
+  dots.forEach((dot,i) => {
+    dot.classList.toggle("active",i === current);
+  });
+
+  document.getElementById("slideCurrent").textContent =
+    String(current + 1).padStart(2,"0");
 }
 
-.project-image-link:hover img {
-  transform: scale(1.03);
-}
+dots.forEach((dot,index) => {
+  dot.addEventListener("click",() => showSlide(index));
+});
 
-<a class="project-image-link"
-   href="https://contra.com/murad_mazharul_cvf2vr5h/work?r=murad_mazharul_cvf2vr5h"
-   target="_blank"
-   rel="noopener noreferrer">
-  <img class="project-image"
-       src="https://media.contra.com"
-       alt="JOU Atelier brand identity and packaging"
-       loading="lazy">
-</a>
+let timer = setInterval(() => showSlide(current + 1),4800);
 
+document.getElementById("showcaseFrame").addEventListener("mouseenter",() => {
+  clearInterval(timer);
+});
+
+document.getElementById("showcaseFrame").addEventListener("mouseleave",() => {
+  clearInterval(timer);
+  timer = setInterval(() => showSlide(current + 1),4800);
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
